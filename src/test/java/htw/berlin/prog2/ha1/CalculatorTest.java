@@ -89,7 +89,7 @@ class CalculatorTest {
     }
 
 
-    //TODO hier weitere Tests erstellen
+    //TODO hier weitere Tests  erstellen
 
     // Dieser Test prüft, ob das Umschalten des Vorzeichens richtig funktioniert
     @Test
