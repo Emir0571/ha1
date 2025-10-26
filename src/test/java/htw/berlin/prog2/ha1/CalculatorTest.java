@@ -23,7 +23,7 @@ class CalculatorTest {
         String expected = "40";
         String actual = calc.readScreen();
 
-        assertEquals(expected, actual);
+        assertEquals(expected, actual); //Test
     }
 
     @Test
