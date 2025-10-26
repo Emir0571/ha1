@@ -90,6 +90,8 @@ class CalculatorTest {
 
 
     //TODO hier weitere Tests erstellen
+
+    // Dieser Test prüft, ob das Umschalten des Vorzeichens richtig funktioniert
     @Test
     @DisplayName("Should switch sign of positive number to negative")
     void testSwitchSign(){
@@ -104,6 +106,7 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    //Dieser Test prüft, ob der Taschenrechner richtig auf eine Division durch Null reagiert, wenn du 1/x auf 0 drückst
     @Test
     @DisplayName("should display error when inverting zero")
     void testInvertZeroShowsError(){
@@ -118,6 +121,7 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    // Dieser Test prüft, ob der Clear-Button sich wie bei einem echten Taschenrechner verhält
     @Test
     @DisplayName("Should only clear screen but keep stored value after first clear")
     void testSingleClearKeepsStoredValue(){
