@@ -47,7 +47,7 @@ public class Calculator {
     private boolean clearPressedOnce = false;
 
     public void pressClearKey() {
-        if(!clearPressedOnce){
+        if(!clearPressedOnce){                          //Bugfix 2. failed test
             screen = "0";
             clearPressedOnce = true;
         } else {
@@ -85,7 +85,13 @@ public class Calculator {
         var result = switch(operation) {
             case "√" -> Math.sqrt(Double.parseDouble(screen));
             case "%" -> Double.parseDouble(screen) / 100;
-            case "1/x" -> 1 / Double.parseDouble(screen);
+            case "1/x" -> {                                     //Bugfix 1. failed test
+                if(Double.parseDouble(screen) == 0){
+                    yield Double.NaN;
+                } else {
+                    yield 1 / Double.parseDouble(screen);
+                }
+            }
             default -> throw new IllegalArgumentException();
         };
         screen = Double.toString(result);
